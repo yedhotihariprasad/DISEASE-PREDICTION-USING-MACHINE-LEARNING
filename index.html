@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mango Leaf AI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>
+      Predict.<br>
+      Identify.<br>
+      Prevent.
+    </h1>
+    <p>AI-powered Mango Leaf Disease Detection System</p>
+  </div>
+</section>
+
+<section class="app-section">
+
+  <div class="glass-panel">
+
+    <form id="uploadForm">
+
+      <div class="upload-zone">
+        <input type="file" id="image" accept="image/*">
+        <label for="image">
+          <span>Upload Leaf Image</span>
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-primary">Analyze Leaf</button>
+        <button type="button" id="resetBtn" class="btn-ghost">Reset</button>
+      </div>
+
+    </form>
+
+    <div class="results">
+
+      <div class="preview-box">
+        <h3>Preview</h3>
+        <img id="imgPreview" src="" alt="preview">
+      </div>
+
+      <div class="prediction-box">
+        <h3>Prediction Result</h3>
+        <div id="preds"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
